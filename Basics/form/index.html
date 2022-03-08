@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form action="" >
+        <label for="">email</label>
+        <input type="text" id="email">
+        <br>
+        <label for="">phone</label>
+        <input type="text" id="phone">
+
+        <br>
+        <button id="save" type="submit" >save</button>
+    </form>
+    <div id="hold" class="hide"></div>
+    <script>
+        function click(){
+           
+        const email = document.querySelector("#email").value;
+        const phone = document.querySelector('#phone').value;
+
+        console.log(email)
+        console.log(phone)
+
+        if(email === ""){
+            alert('enter email')
+        }else{
+            
+        const hold = document.querySelector('#hold');
+        let para = document.createElement('p');
+        hold.classList.add('show')
+        para.innerHTML = email 
+        hold.appendChild(para)
+
+        }
+        if(phone === ""){
+            alert('enter email')
+        }else{
+        const hold = document.querySelector('#hold');
+        let para = document.createElement('p');
+        hold.classList.add('show')
+        para.innerHTML = phone
+        hold.appendChild(para)
+        }
+
+
+
+        }
+
+        document.querySelector('button').addEventListener('click', (e) => {
+            e.preventDefault();
+            click()
+        })
+    </script>
+    
+</body>
+</html>

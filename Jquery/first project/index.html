@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    div{
+        width: 40vw;
+        height: 40vh;
+        background-color: #e79bec;
+        margin: 20px;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#cricket").click(function(){
+    $(this).css("background-color", "#ffffe0");
+  });
+
+  $("#football").click(function(){
+    $(this).css("background-color", "#ffc0cb");
+  });
+
+  $("#hockey").click(function(){
+    $(this).css("background-color", "#add8e6");
+  });
+
+  $("#tennis").click(function(){
+    $(this).css("background-color", "#d3d3d3");
+  });
+
+
+  // $("#cricket").mouseover(function(){
+  //   $(this).css("background-color", "green");
+  // });
+  // $("#football").mouseover(function(){
+  //   $(this).css("background-color", "green");
+  // });
+  // $("#hockey").mouseover(function(){
+  //   $(this).css("background-color", "green");
+  // });
+ 
+  // $("#tennis").mouseover(function(){
+  //   $(this).css("background-color", "green");
+  // });
+});
+</script>
+</head>
+<body>
+    <div id="cricket"></div>
+    <div id="football"></div>
+    <div id="hockey"></div>
+    <div id="tennis"></div>
+
+</body>
+</html>

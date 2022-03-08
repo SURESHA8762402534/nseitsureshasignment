@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        form{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            margin: 0 350px 0 350px;
+        }
+    </style>
+</head>
+<body>
+  <div>
+        
+     <form action=""  >
+        
+        <input type="number" id="firstNumber">
+       <select id="opt" >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+
+       </select>
+        
+        <input type="number" id="secondNumber" >
+       <i>=</i>
+       
+        <input type="number" id="answer" value="0">
+        
+        <button id="compute" type="submit" >compute</button>
+    </form>
+</div>
+<script>
+
+function click(){
+           
+    const  first= document.querySelector("#firstNumber").value;
+    const opt = document.querySelector('#opt').value;
+    const second = document.querySelector('#secondNumber').value;
+    
+   
+
+    console.log(first)
+    console.log(second)
+    console.log(opt)
+   
+
+    let tek = first + opt + second ;
+    let output = eval(tek)
+
+    console.log(output)
+    // console.log(ans)
+   document.querySelector('#answer').value = output;
+}
+
+document.querySelector('button').addEventListener('click', (e) => {
+            e.preventDefault();
+            click()
+        })
+
+</script>
+</body>
+</html>
